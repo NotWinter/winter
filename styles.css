@@ -6,11 +6,9 @@
 
 #particles-js {
     height: 100%;
-    position: absolute;
+    position: fixed;
     background-position: center;
     z-index: -1;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 body {
@@ -21,8 +19,7 @@ body {
     background-color: #121212;
     display: grid;
     grid-template-rows: 10% 1fr;
-    
-
+    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -35,24 +32,28 @@ header {
     grid-template-columns: 10% 1fr;
 }
 
-html {
-    scroll-behavior: smooth;
-  }
-  .max-width {
-    max-width: 1300px;
-    padding: 0 80px;
-    margin: auto;
-  }
-  
-  ::-webkit-scrollbar {
+::selection {
+    background: none;
+    color: crimson;
+}
+
+::-webkit-scrollbar {
     width: 10px;
-    background: #121212;
   }
-  ::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background: crimson;
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px -2px rgba(0,0,0,0.25);
-  }
+
+::-webkit-scrollbar-track {
+background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: crimson;
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px -2px rgba(0,0,0,0.25);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+background: crimson;
+}
 
 .logo {
     display: flex;
